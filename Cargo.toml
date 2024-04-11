@@ -1,0 +1,19 @@
+[package]
+name = "simd_test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libc = "0.2"
+pulp = { version = "0.18", features = ["macro", "nightly"] }
+
+[dev-dependencies]
+divan = "0.1"
+aligned-vec = "0.5"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[build-dependencies]
+cc = "1.0"
